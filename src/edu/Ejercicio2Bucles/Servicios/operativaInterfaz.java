@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public interface operativaInterfaz {
 	
-	public int CapturaEnteroComprobacion(String mensaje, Scanner scanner );
+	public int CapturaEnteroComprobacion(Scanner scanner );
 	
-	public boolean ComprobadorNumeroPrimo(int comprobacionNumero);
-	
-	public void MostrarXNumerosPrimos();
+	public boolean ComprobadorNumeroPrimo(int numRepeticiones);
+
+	public void MostrarXNumerosPrimos(int numRepeticiones);
 
 }

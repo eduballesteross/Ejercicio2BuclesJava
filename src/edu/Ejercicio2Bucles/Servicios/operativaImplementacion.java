@@ -6,16 +6,15 @@ import java.util.Scanner;
 public class operativaImplementacion implements operativaInterfaz{
 
 	
-	public int CapturaEnteroComprobacion(String mensaje, Scanner scanner) {
+	public int CapturaEnteroComprobacion(Scanner scanner) {
 		int numero;
 		
 		do {
 			
-			System.out.println("Introduzca un número para comprobar si es primo o no:");
+			System.out.println("Introduzca el numero de numeros primos que quieres ver");
 			
 		while (!scanner.hasNextInt()){
 			System.out.println("[INFO] Los números negativos, el cero o los numeros con decimales pueden ser numeros primos.");
-			System.out.println(mensaje);
 			scanner.next();
 		}
 		
@@ -34,52 +33,54 @@ public class operativaImplementacion implements operativaInterfaz{
 		
 		if (comprobacionNumero<2) {
 		
-			System.out.println("El numero introducido no es primo.");
 			
 			return false;
 		
 		}else if (comprobacionNumero%2==0) {
 			
-			System.out.println("El numero introducido no es primo.");
+			
 			return false;
 			
 		} else if(comprobacionNumero%Math.sqrt(comprobacionNumero)==0) {
 			
-			System.out.println("El numero introducido no es primo.");
+			
 			return false;
 			
 		}else {
-			System.out.println("El numero introducido es primo.");
-			
+		
+			System.out.println( );
 		}
 		return true;
-		}
-
-
-	
-	public void MostrarXNumerosPrimos() {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		int numRepeticiones;
-		int primosEncontrados=0;
-		
-		System.out.println("Introduzca el numero de numeros primos que quieres ver.");
-		
-		numRepeticiones=sc.nextInt();
-		
-		for (int i=2 ; primosEncontrados <= numRepeticiones; i++ ) {
-			
-			if(ComprobadorNumeroPrimo(i)) {
-				 System.out.print(i + " ");
-				 primosEncontrados++;
-			
-		}
-		
 	}
 		
+
+		
 	
 		
+	
+
+
+	
+	public void MostrarXNumerosPrimos(int numRepeticiones) {
+		
+
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int primosEncontrados=0;
+		
+	
+		
+		
+		
+		for (int i=2 ; primosEncontrados < numRepeticiones; i++ ) {
+			
+			if(ComprobadorNumeroPrimo(i)) {
+				 System.out.print(i);
+				 primosEncontrados++;
+			}
+		}
+				 
 	}
 	}
 

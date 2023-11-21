@@ -13,12 +13,12 @@ public class inicio {
 		
 		operativaInterfaz operativaI = new operativaImplementacion();
 		
-		int comprobacionNumero;
+		int numRepeticiones;
 		
-		comprobacionNumero = operativaI.CapturaEnteroComprobacion("Introduzca un número para comprobar si el numero introducido es primo o no", sc);
+		numRepeticiones = operativaI.CapturaEnteroComprobacion(sc);
 		
 	
-		operativaI.MostrarXNumerosPrimos();
+		operativaI.MostrarXNumerosPrimos(numRepeticiones);
 			
 		}
 	
