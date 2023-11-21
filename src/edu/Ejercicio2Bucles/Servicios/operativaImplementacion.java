@@ -11,10 +11,10 @@ public class operativaImplementacion implements operativaInterfaz{
 		
 		do {
 			
-			System.out.println("Introduzca el numero de numeros primos que quieres ver");
+			System.out.println("Introduzca el número de números primos que quieres ver:");
 			
 		while (!scanner.hasNextInt()){
-			System.out.println("[INFO] Los números negativos, el cero o los numeros con decimales pueden ser numeros primos.");
+			
 			scanner.next();
 		}
 		
